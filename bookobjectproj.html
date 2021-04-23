@@ -15,7 +15,23 @@
     <body>
 
         <div class="container">
-            <button class="displayBooks">DISPLAY ALL BOOKS!</button>
+            <button class="addNewBook" onclick="">Add a New Book!</button>
+            <div id="addNewBookForm">
+                <form action="">
+                    <label for="title">Title of Book:</label>
+                    <input type="text" id="bookTitle" name="title" value="Book Title"><br>
+                    <label for="author">Author of book:</label>
+                    <input type="text" id="bookAuthor" name="author" value="Book Author"><br>
+                    <label for="pages">Number of pages:</label>
+                    <input type="number" name="pages" id="pageNumber" value="0"><br>
+                    <label for="read">Have you read the book?</label>
+                    <input type="radio" name="read" id="readBookYes" value="True">
+                    <label for="readBookYes">Yes I have Read the book!</label>
+                    <input type="radio" name="read" id="readBookNo" value="False">
+                    <label for="readBookNo">I have not read the book!</label><br>
+                    <input type="submit" value="submit" onclick="addBookToLibrary()">
+                </form><br>
+            </div>
         </div>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
