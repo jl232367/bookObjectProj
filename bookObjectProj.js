@@ -33,6 +33,7 @@ function expandCollapseForm () {
 }
 
 function addBookToLibrary () { 
+    preventDefault();
     const newBookTitle = document.getElementById("bookTitle").value;
     const newBookAuthor = document.getElementById("bookAuthor").value;
     const newBookPages = document.getElementById("pageNumber").value;
