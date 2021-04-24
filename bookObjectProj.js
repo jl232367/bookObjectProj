@@ -1,7 +1,7 @@
 const dispButton = document.querySelector('.addNewBook');
 const showBtn = document.querySelector('button');
 const hobbit = new book ("The Hobbit", "J.R.R Tolkien", 295, "False");
-const hp1 = new book ("Harry Potter and the socerer's stone", "J.K. Rowling", 300, "Ture");
+const hp1 = new book ("Harry Potter and the socerer's stone", "J.K. Rowling", 300, "True");
 const theGreatDivorce = new book ("The Great Divorce", "C.S. Lewis", 195, "True");
 let myLibrary = [hobbit, hp1, theGreatDivorce];
 let formDisplay = document.getElementById("addNewBookForm");
@@ -21,7 +21,13 @@ function book(title, author, pages, read) {
     this.bookInfo = function () {
         return title + " by " + author + ", " + pages + " pages, " + "I have read this book " + read; 
     }
-    
+    this.readToggle = function () {
+        if (read === "True") {
+            read = "False";
+        } else {
+            read = "True";
+        }
+    }
 }
 
 function expandCollapseForm () {
@@ -57,18 +63,32 @@ function addBookToLibrary () {
 }
 
 function displayBooks() {
+    clearList();
     // I am making this loop to display all the contents of the array holding the objects that contain the Book data
 for (let i = 0; i < myLibrary.length; i++) {
     const bookList = document.querySelector(".bookList");
     const eachBook = document.createElement("div");
     const removeButton = document.createElement("button")
+    const readOnOff = document.createElement("button")
+    const brk = document.createElement("br");
     bookList.appendChild(eachBook);
     bookList.appendChild(removeButton);
+    bookList.appendChild(brk);
+    bookList.appendChild(readOnOff);
     removeButton.setAttribute("class", "removeButton");
     removeButton.setAttribute('id',  i);
     removeButton.dataset.rIndexNum = i; 
     removeButton.addEventListener('click', (e) => {removeABook(e)} 
     );
+    readOnOff.setAttribute("class", "readOnOffButton");
+    readOnOff.setAttribute("id", i);
+    readOnOff.dataset.inNum = i;
+    readOnOff.addEventListener('click',(e) => {
+        let dataNum = e.target.getAttribute("id");
+        myLibrary[dataNum].readToggle();
+        clearList();
+        displayBooks();
+    });
         
         
         //alert(dataNum);
@@ -87,7 +107,8 @@ for (let i = 0; i < myLibrary.length; i++) {
     eachBook.setAttribute('class', "eachBook");
     eachBook.setAttribute('id', myLibrary[i].title + i);
     eachBook.innerHTML = myLibrary[i].bookInfo(); 
-    removeButton.innerHTML = "Remove Book"
+    removeButton.innerHTML = "Remove Book";
+    readOnOff.innerHTML = "Toggle have or Haven't read";
 }
 }
 
@@ -101,9 +122,13 @@ function clearList () {
 function removeABook (e) {
     let dataNum = e.target.getAttribute("id");
     //alert(dataNum);
+    //alert(myLibrary);
         myLibrary.splice(dataNum,1);
-        displayBooks;
+        clearList();
+        displayBooks();
 }
+
+
 /*
 function displayBooks() {
     // I am making this loop to display all the contents of the array holding the objects that contain the Book data
@@ -145,4 +170,14 @@ this.removeBook = function () {
             }
         }
     }
+
+
+
+    function readToggle (e) {
+    let dataNum = e.target.getAttribute("id");
+    
+    myLibrary[dataNum].readtoggle
+    //clearList();
+    //displayBooks();
+}
 */
