@@ -12,6 +12,10 @@ dispButton.addEventListener('click', () => {expandCollapseForm()}
 
 displayBooks();
 
+const pBook = (title, author, pages, read) => {
+
+    
+}
 
 function book(title, author, pages, read) {
     this.title = title
