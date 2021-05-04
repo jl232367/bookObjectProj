@@ -1,9 +1,29 @@
+
+
+const pBook = (title, author, pages, read) => {
+    const bookInfo = () => {
+        return title + " by " + author + ", " + pages + " pages, " + "I have read this book " + read;
+    };
+
+    const readToggle = () => {
+        if (read === "True") {
+            read = "False";
+        } else {
+            read = "True";
+        }
+    };
+    return {bookInfo}
+}
+
+const hobbit = pBook ("The Hobbit", "J.R.R Tolkien", 295, "False");
+const hp1 = pBook ("Harry Potter and the socerer's stone", "J.K. Rowling", 300, "True");
+const theGreatDivorce = pBook("The Great Divorce", "C.S. Lewis", 195, "True");
+let myLibrary = [hobbit, hp1, theGreatDivorce];
 const dispButton = document.querySelector('.addNewBook');
 const showBtn = document.querySelector('button');
-const hobbit = new book ("The Hobbit", "J.R.R Tolkien", 295, "False");
-const hp1 = new book ("Harry Potter and the socerer's stone", "J.K. Rowling", 300, "True");
-const theGreatDivorce = new book ("The Great Divorce", "C.S. Lewis", 195, "True");
-let myLibrary = [hobbit, hp1, theGreatDivorce];
+
+
+
 let formDisplay = document.getElementById("addNewBookForm");
 formDisplay.style.display = "none";
 
@@ -11,12 +31,7 @@ dispButton.addEventListener('click', () => {expandCollapseForm()}
 );
 
 displayBooks();
-
-const pBook = (title, author, pages, read) => {
-
-    
-}
-
+/*
 function book(title, author, pages, read) {
     this.title = title
     this.author = author
@@ -33,7 +48,7 @@ function book(title, author, pages, read) {
         }
     }
 }
-
+*/
 function expandCollapseForm () {
     
     if (formDisplay.style.display === "none") {
@@ -50,7 +65,7 @@ function addBookToLibrary () {
     const newBookPages = document.getElementById("pageNumber").value;
     const newBookRead = checkReadValue (); 
      //alert(newBookTitle + newBookAuthor + newBookPages + newBookRead);
-    const newBook = new book(newBookTitle, newBookAuthor, newBookPages, newBookRead);
+    const newBook = pBook(newBookTitle, newBookAuthor, newBookPages, newBookRead);
     myLibrary.push(newBook);
     clearList();
     displayBooks();
