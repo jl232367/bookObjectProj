@@ -71,10 +71,13 @@ for (let i = 0; i < myLibrary.length; i++) {
     const removeButton = document.createElement("button")
     const readOnOff = document.createElement("button")
     const brk = document.createElement("br");
+    eachBook.setAttribute('class', "eachBook");
+    eachBook.setAttribute('id', myLibrary[i].title + i);
+    eachBook.innerText = myLibrary[i].bookInfo(); 
     bookList.appendChild(eachBook);
-    bookList.appendChild(removeButton);
-    bookList.appendChild(brk);
-    bookList.appendChild(readOnOff);
+    eachBook.appendChild(removeButton);
+    eachBook.appendChild(brk);
+    eachBook.appendChild(readOnOff);
     removeButton.setAttribute("class", "removeButton");
     removeButton.setAttribute('id',  i);
     removeButton.dataset.rIndexNum = i; 
@@ -104,9 +107,8 @@ for (let i = 0; i < myLibrary.length; i++) {
         
         */
     
-    eachBook.setAttribute('class', "eachBook");
-    eachBook.setAttribute('id', myLibrary[i].title + i);
-    eachBook.innerHTML = myLibrary[i].bookInfo(); 
+    
+    
     removeButton.innerHTML = "Remove Book";
     readOnOff.innerHTML = "Toggle have or Haven't read";
 }

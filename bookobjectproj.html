@@ -15,8 +15,12 @@
     <body>
 
         <div class="container">
-            <button class="addNewBook" onclick="">Open/close New Book Form</button>
-            <br>
+            <div class="headernav">
+                <h1>Your Library!</h1>
+            </div>
+            <div class="sidecontrols">
+                <button class="addNewBook" onclick="">Open/close New Book Form</button>
+                <br>
             <div id="addNewBookForm">
                 <form action="">
                     <label for="title">Title of Book:</label>
@@ -27,16 +31,21 @@
                     <input type="number" name="pages" id="pageNumber" value="0"><br>
                     <label for="read">Have you read the book?</label>
                     <input type="radio" name="read" id="readBookYes" value="True">
-                    <label for="readBookYes">Yes I have Read the book!</label>
+                    <label for="readBookYes">Yes, I have!</label>
                     <input type="radio" name="read" id="readBookNo" value="False">
-                    <label for="readBookNo">I have not read the book!</label><br>
+                    <label for="readBookNo">No, I Haven't!</label><br>
                     
                 </form><br>
                 <button id="subBtn" onclick="addBookToLibrary()">Add a new Book!</button>
             </div>
             <br>
+            </div>
+            
             <div class="bookList">
 
+            </div>
+            <div class="footer">
+                <h6>Some Footer text here.</h6>
             </div>
         </div>
         <!--[if lt IE 7]>
