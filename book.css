@@ -112,7 +112,7 @@
     border: none;
     border-radius: 5px;
     height: 50px;
-    font-size: 1em;
+    font-size: .8em;
 }
 input[type=text] {
     max-width: 80%;
