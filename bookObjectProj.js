@@ -112,7 +112,7 @@ for (let i = 0; i < myLibrary.length; i++) {
     
     
     removeButton.innerHTML = "Remove Book";
-    readOnOff.innerHTML = "Toggle have or Haven't read";
+    readOnOff.innerHTML = "Read: Yes/No";
 }
 }
 
