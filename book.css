@@ -8,34 +8,73 @@
 }
 .headernav {
     grid-area: 1/1/2/7;
-    border: 1px solid black;
+    
 }
 
 .footer {
     grid-area: 3/1/4/7;
-    border: 1px solid black;
+    
 }
 .sidecontrols {
     grid-area: 2/1/3/3;
-    border: 1px solid black;
+    
     margin: 5%;
     margin-left: 0;
     display:flex;
     flex-wrap: wrap;
+    justify-content: start;
+    align-content: flex-start;
 }
 .bookList {
     grid-area: 2/3/3/7;
-    border: 1px solid black;
+    
     margin: 2.5% 0;
     display: flex;
     flex-wrap: wrap;
+    
 }
 .eachBook {
     width: 250px;
     height: 360px;
+    
+    border-radius: 7px;
+    margin: auto;
+    margin-top: 10px;
     display: flex;
     flex-flow: column;
     flex-wrap: wrap;
+    color: white;
+    background-color: #035efc;
+    opacity: 75%;
+    align-content: space-around;
+    justify-content: space-between;
+}
+.removeButton {
+    color: gray;
+    background:white;
+    padding: 6px 12px;
+    width: 90%;
+    margin: 5% auto;
+    
+    border: none;
+    border-radius: 5px;
+    height: 25px;
+    font-size: 1em;
+    align-self: flex-end;
+}
+
+.readOnOffButton {
+    color: gray;
+    background:white;
+    padding: 6px 12px;
+    width: 90%;
+    margin: 5% auto;
+    
+    border: none;
+    border-radius: 5px;
+    height: 25px;
+    font-size: 1em;
+    align-self: flex-end;
 }
 .addNewBook {
     color: white;
@@ -53,7 +92,7 @@
     display: flex;
     flex-flow: row;
     flex-wrap: wrap;
-    align-content: left;
+    align-content: top;
     
    
 }
@@ -62,6 +101,18 @@
     flex-wrap: wrap;
     max-width: 100%;
 
+}
+#subBtn {
+    color: white;
+    background:#0077c5;
+    padding: 6px 12px;
+    width: 90%;
+    margin: 5% auto;
+    margin-bottom: 10%;
+    border: none;
+    border-radius: 5px;
+    height: 50px;
+    font-size: 1em;
 }
 input[type=text] {
     max-width: 80%;
