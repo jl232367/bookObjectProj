@@ -68,13 +68,15 @@ function displayBooks() {
 for (let i = 0; i < myLibrary.length; i++) {
     const bookList = document.querySelector(".bookList");
     const eachBook = document.createElement("div");
+    const eachBookInfo = document.createElement('h3')
     const removeButton = document.createElement("button")
     const readOnOff = document.createElement("button")
     const brk = document.createElement("br");
     eachBook.setAttribute('class', "eachBook");
     eachBook.setAttribute('id', myLibrary[i].title + i);
-    eachBook.innerText = myLibrary[i].bookInfo(); 
+    eachBookInfo.innerText = myLibrary[i].bookInfo(); 
     bookList.appendChild(eachBook);
+    eachBook.appendChild(eachBookInfo);
     eachBook.appendChild(removeButton);
     eachBook.appendChild(brk);
     eachBook.appendChild(readOnOff);
