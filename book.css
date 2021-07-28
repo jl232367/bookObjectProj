@@ -8,7 +8,8 @@
 }
 .headernav {
     grid-area: 1/1/2/7;
-    
+    background: #45ccf5;
+    background: linear-gradient(to right, #ceecf5,#035efc, #45ccf5); 
 }
 
 .footer {
@@ -88,6 +89,12 @@
     height: 75px;
     font-size: 1em;
 }
+.addNewBook:hover {
+    background: #f5bc67;
+}
+button:hover {
+    background: #f5bc67;
+}
 #addNewBookForm form {
     display: flex;
     flex-flow: row;
@@ -113,6 +120,13 @@
     border-radius: 5px;
     height: 50px;
     font-size: .8em;
+}
+#subBtn:hover {
+        background: #f5bc67; 
+}
+#subBtn:hover {
+    background:  #f5bc67;
+   
 }
 input[type=text] {
     max-width: 80%;
