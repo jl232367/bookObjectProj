@@ -1,0 +1,28 @@
+{
+  "name": "bookobjectproj",
+  "version": "1.0.0",
+  "description": "The Odin Project project with making construct objects to store books information.",
+  "main": "bookObjectProj.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jl232367/bookObjectProj.git"
+  },
+  "author": "Jacob Luallen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jl232367/bookObjectProj/issues"
+  },
+  "homepage": "https://github.com/jl232367/bookObjectProj#readme",
+  "devDependencies": {
+    "css-loader": "^6.2.0",
+    "less": "^4.1.1",
+    "less-loader": "^10.0.1",
+    "style-loader": "^3.2.1",
+    "webpack": "^5.47.1",
+    "webpack-cli": "^4.7.2"
+  }
+}
